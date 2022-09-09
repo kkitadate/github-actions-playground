@@ -29,9 +29,9 @@ jobs:
           ＜testing＞
           EOS`
 
-          gh issue create --repo $GITHUB_REPOSITORY 
-                          --title "$(cat title)"
-                          --body "$(cat body)"
+          gh issue create --repo $GITHUB_REPOSITORY \
+                          --title "$(cat title)" \
+                          --body "$(cat body)" \
                           --label "test,test2"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
